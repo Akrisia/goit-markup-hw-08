@@ -1,3 +1,9 @@
+.section--works {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .works {
   display: flex;
   margin-left: calc(-1 * 30px);
