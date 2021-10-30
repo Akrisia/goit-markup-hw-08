@@ -163,6 +163,12 @@ body {
   fill: var(--team-social-icon-color);
 }
 
+@media screen and (min-width: 1200px) {
+  footer .socials {
+    justify-content: left;
+  }
+}
+
 footer .socials__link {
   background-color: var(--footer-social-bg-color);
 }
@@ -898,12 +904,14 @@ footer {
   .container--footer {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container--footer {
+    text-align: left;
+    flex-wrap: nowrap;
     align-items: baseline;
   }
 }
@@ -912,13 +920,21 @@ footer {
   margin-bottom: 60px;
 }
 
-@media screen and (min-width: 1200px) {
-  .footer__block:nth-child(1) {
-    flex-grow: 1;
+@media screen and (min-width: 768px) {
+  .footer__block {
+    flex-basis: calc(100% / 2 - 165px);
   }
+  .footer__block:nth-child(2) {
+    margin-left: 165px;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .footer__block:nth-child(2) {
     margin-right: 93px;
     margin-left: 70px;
+    margin-top: 0;
   }
 }
 
@@ -969,7 +985,6 @@ footer {
 @media screen and (min-width: 1200px) {
   .subscriprion__form {
     display: flex;
-    align-items: center;
     margin-top: 20px;
   }
 }
@@ -996,6 +1011,12 @@ footer {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .subscriprion__input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
