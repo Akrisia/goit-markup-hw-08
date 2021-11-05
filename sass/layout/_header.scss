@@ -93,9 +93,17 @@ header {
 .mob-menu__tel {
   @extend %link;
   display: block;
-  @include font(34px, 500, 40px, 0.02em);
+  @include font(26px, 500, 40px, 0.02em);
   color: var(--accent-color);
   margin-bottom: 32px;
+  transition: text-decoration var(--primary-animation);
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+  @media screen and (min-width: 480px) {
+    @include font(34px, 500, 40px, 0.02em);
+  }
 }
 
 .mob-menu__email {
@@ -107,7 +115,11 @@ header {
 
 .menu-socials__list {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 64px;
+  @media screen and (min-width: 480px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .menu-socials__item {
@@ -125,9 +137,14 @@ header {
   display: block;
   @include font(18px, 500, 22px, 0.02em);
   color: var(--accent-color);
+  transition: text-decoration var(--primary-animation);
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
-// regular menu
+// tab and desctop menu
 
 nav {
   @media screen and (max-width: 767px) {
