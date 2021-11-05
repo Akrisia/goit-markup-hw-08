@@ -566,6 +566,12 @@ header {
   margin-top: 64px;
 }
 
+@media screen and (max-width: 479px) {
+  .menu-socials__list {
+    margin-left: calc(-1 * 10px);
+  }
+}
+
 @media screen and (min-width: 480px) {
   .menu-socials__list {
     flex-wrap: nowrap;
@@ -577,8 +583,16 @@ header {
   border-right: 1px solid var(--socials-border-color);
 }
 
-.menu-socials__item:not(:first-child) {
-  padding-left: 10px;
+@media screen and (max-width: 479px) {
+  .menu-socials__item {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .menu-socials__item:not(:first-child) {
+    padding-left: 10px;
+  }
 }
 
 .menu-socials__link {
