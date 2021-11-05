@@ -7,7 +7,6 @@ footer {
 
 .container--footer {
   text-align: center;
-  margin-bottom: calc(-1 * 60px);
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -17,23 +16,18 @@ footer {
     text-align: left;
     flex-wrap: nowrap;
     align-items: baseline;
+    justify-content: space-between;
   }
 }
 
 .footer__block {
-  margin-bottom: 60px;
   @media screen and (min-width: 768px) {
-    flex-basis: calc(100% / 2 - 165px);
     &:nth-child(2) {
       margin-top: 5px;
     }
   }
-  @media screen and (min-width: 1200px) {
-    &:nth-child(2) {
-      margin-right: 93px;
-      margin-left: 70px;
-      margin-top: 0;
-    }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
   }
 }
 

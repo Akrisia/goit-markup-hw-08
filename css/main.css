@@ -907,13 +907,14 @@ header {
 
 .works {
   display: flex;
-  margin-left: calc(-1 * 30px);
 }
 
 .works__item {
   position: relative;
   overflow: hidden;
-  flex-basis: calc(100% / 3 - 30px);
+}
+
+.works__item:not(:first-child) {
   margin-left: 30px;
 }
 
@@ -1069,6 +1070,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * 8px);
+  margin-bottom: calc(-1 * 15px);
 }
 
 @media screen and (min-width: 768px) {
@@ -1076,6 +1078,13 @@ header {
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters {
+    margin-bottom: 50px;
   }
 }
 
@@ -1118,14 +1127,8 @@ header {
   .projects {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: calc(-1 * 30px);
     margin-left: calc(-1 * 30px);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .projects {
-    margin-top: 50px;
   }
 }
 
@@ -1138,22 +1141,14 @@ header {
 @media screen and (min-width: 768px) {
   .projects__item {
     flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .projects__item:not(:nth-child(-n + 2)) {
     margin-top: 30px;
+    margin-left: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .projects__item {
     flex-basis: calc(100% / 3 - 30px);
-  }
-  .projects__item:not(:nth-child(1)), .projects__item:not(:nth-child(2)), .projects__item:not(:nth-child(3)) {
-    margin-top: 30px;
   }
 }
 
@@ -1258,7 +1253,6 @@ footer {
 
 .container--footer {
   text-align: center;
-  margin-bottom: calc(-1 * 60px);
 }
 
 @media screen and (min-width: 768px) {
@@ -1274,27 +1268,19 @@ footer {
     text-align: left;
     flex-wrap: nowrap;
     align-items: baseline;
+    justify-content: space-between;
   }
-}
-
-.footer__block {
-  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
-  .footer__block {
-    flex-basis: calc(100% / 2 - 165px);
-  }
   .footer__block:nth-child(2) {
     margin-top: 5px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .footer__block:nth-child(2) {
-    margin-right: 93px;
-    margin-left: 70px;
-    margin-top: 0;
+@media screen and (max-width: 1199px) {
+  .footer__block {
+    margin-bottom: 60px;
   }
 }
 
