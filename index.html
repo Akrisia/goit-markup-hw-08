@@ -175,7 +175,7 @@
                 </li>
                 <li class="works__item">
                     <img
-                    srcset="/images/works/box_3.jpg 1x,
+                    srcset="./images/works/box_3.jpg 1x,
                     ./images/works/box_3-2x.jpg 2x"
                     src="./images/works/box_3.jpg"
                     alt="В левой руке планшет, в правой маркер, руки находятся над компьютерным столом"
@@ -663,28 +663,5 @@
 <!-- скрипт мобильного меню -->
     <script src="./js/mobile-menu.js"></script>
 
-<!-- скрипт хэдэра -->
-    <script>
-        const { height: pageHeaderHeight } = document
-                .querySelector(".header")
-                .getBoundingClientRect();
-
-            document.body.style.paddingTop = `${pageHeaderHeight}px`;
-    </script>
-
-<!-- скрипт для форм -->
-    <script>
-        (() => {
-            document
-            .querySelector('.js-speaker-form')
-            .addEventListener('submit', e => {
-                e.preventDefault();
-
-                new FormData(e.currentTarget).forEach((value, name) =>
-                console.log(`${name}: ${value}`),
-                );
-            });
-        })();
-    </script>
 </body>
 </html>
